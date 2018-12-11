@@ -56,6 +56,7 @@ class CalendarAppState extends State<CalendarApp>
                   curve: Curves.ease,
                   transform: rotaionTransform,
                   color: color,
+                  alignment: Alignment.center,
                   width: 50,
                   height: 50,
                   duration: Duration(seconds: 1),
