@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 
 class HomePage extends StatelessWidget {
+  getDate(int offset) {
+    return DateTime.now().add(Duration(days: offset - 365));
+  }
+
   @override
   Widget build(BuildContext context) {
     var format = new intl.DateFormat.yMMMd();
@@ -11,13 +15,14 @@ class HomePage extends StatelessWidget {
         ),
         body: PageView.builder(
           controller: PageController(
-            initialPage: 356
+            initialPage: 365
           ),
           itemBuilder: (BuildContext context, int index) {
             print(index.toString());
             return Container(
+              alignment: Alignment.center,
               child: Text(
-                index.toString(),
+                format.format(getDate(index)).toString(),
               ),
             );
           },
