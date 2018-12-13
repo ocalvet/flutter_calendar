@@ -24,6 +24,7 @@ class HomePage extends StatelessWidget {
                   SliverAppBar(
                     pinned: true,
                     expandedHeight: 150.0,
+                    backgroundColor: Colors.redAccent,
                     flexibleSpace: FlexibleSpaceBar(
                       title: Text('${format.format(getDate(index))}'),
                     ),
